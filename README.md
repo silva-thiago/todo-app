@@ -5,8 +5,8 @@
 * [x] Setup
 * [x] Create new to-do form
 * [x] Call a function when the form is submitted
-* [ ] Create a string property to store the user
-  * [ ] Watch the property change as type in the input
+* [x] Create a string property to store the user
+  * [x] Watch the property change as type in the input
 * [ ] Log the user input when the form is submitted
 * [ ] Create an array property for to-dos
 * [ ] Push the new to-do into the to-dos array, with done: false

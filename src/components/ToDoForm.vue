@@ -7,6 +7,7 @@
       <button>Add new ToDo</button>
     </form>
     <button @click="markAllDone">Mark All Done</button>
+    <button @click="removeAllTodos">Remove All ToDos</button>
     <ul>
       <li v-for="(todo, index) in todos" :key="todo.id" :class="todo">
         <h3 :class="{ done: todo.done }" @click="toggleDone(todo)" title="Click to mark a task as done or to redo it">{{todo.content}}</h3>
@@ -45,13 +46,18 @@ export default {
       todos.value.forEach((todo) => (todo.done = true))
     }
 
+    function removeAllTodos () {
+      todos.value = []
+    }
+
     return {
       todos,
       newTodo,
       addNewTodo,
       toggleDone,
       removeTodo,
-      markAllDone
+      markAllDone,
+      removeAllTodos
     }
   },
 

@@ -15,7 +15,7 @@
   * [x] Show a line through the to-do text
 * [x] Add a button to delete a to-do
 * [x] Add a button to mark all to-dos as done
-* [ ] Add a button to remove all to-dos
+* [x] Add a button to remove all to-dos
 
 ## Project setup
 ```

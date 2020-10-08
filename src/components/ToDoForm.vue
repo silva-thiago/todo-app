@@ -6,6 +6,11 @@
       <input type="text" name="newTodo" v-model="newTodo" />
       <button>Add new ToDo</button>
     </form>
+    <ul>
+      <li v-for="todo in todos" :key="todo.id">
+        <h3>{{todo.content}}</h3>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -19,9 +24,11 @@ export default {
 
     function addNewTodo () {
       todos.value.push({
+        id: Date.now(), // it has a unique value, this is for test
         done: false,
         content: newTodo.value
       })
+      newTodo.value = ''
     }
 
     return {

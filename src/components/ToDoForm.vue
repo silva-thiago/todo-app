@@ -15,12 +15,17 @@ import { ref } from 'vue'
 export default {
   setup () {
     const newTodo = ref('')
+    const todos = ref([])
 
     function addNewTodo () {
-      console.log(newTodo.value)
+      todos.value.push({
+        done: false,
+        content: newTodo.value
+      })
     }
 
     return {
+      todos,
       newTodo,
       addNewTodo
     }

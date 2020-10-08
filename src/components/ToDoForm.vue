@@ -17,7 +17,7 @@ export default {
     const newTodo = ref('')
 
     function addNewTodo () {
-      console.log('form was submitted')
+      console.log(newTodo.value)
     }
 
     return {

@@ -7,8 +7,9 @@
       <button>Add new ToDo</button>
     </form>
     <ul>
-      <li v-for="todo in todos" :key="todo.id" :class="todo">
+      <li v-for="(todo, index) in todos" :key="todo.id" :class="todo">
         <h3 :class="{ done: todo.done }" @click="toggleDone(todo)" title="Click to mark a task as done or to redo it">{{todo.content}}</h3>
+        <button @click="removeTodo(index)">Remove ToDo</button>
       </li>
     </ul>
   </div>
@@ -35,11 +36,16 @@ export default {
       todo.done = !todo.done
     }
 
+    function removeTodo (index) {
+      todos.value.splice(index, 1)
+    }
+
     return {
       todos,
       newTodo,
       addNewTodo,
-      toggleDone
+      toggleDone,
+      removeTodo
     }
   },
 

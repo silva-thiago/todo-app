@@ -13,7 +13,7 @@
 * [x] Show the to-dos in a list
 * [x] Check done on a to-do to mark it as done or to redo it
   * [x] Show a line through the to-do text
-* [ ] Add a button to delete a to-do
+* [x] Add a button to delete a to-do
 * [ ] Add a button to mark all to-dos as done
 
 ## Project setup

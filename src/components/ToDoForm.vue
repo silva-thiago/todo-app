@@ -1,7 +1,7 @@
 <template>
   <div class="todo">
     <h1>{{ msg }}</h1>
-    <form>
+    <form @submit.prevent="addNewTodo">
       <label for="newTodo">New ToDo</label>
       <input type="text" name="newTodo" />
       <button>Add new ToDo</button>
@@ -11,6 +11,16 @@
 
 <script>
 export default {
+  setup () {
+    function addNewTodo () {
+      console.log('form was submitted')
+    }
+
+    return {
+      addNewTodo
+    }
+  },
+
   name: 'ToDoForm',
   props: {
     msg: String

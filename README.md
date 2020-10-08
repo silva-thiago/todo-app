@@ -3,8 +3,8 @@
 ## Specs
 
 * [x] Setup
-* [ ] Create new to-do form
-* [ ] Call a function when the form is submitted
+* [x] Create new to-do form
+* [x] Call a function when the form is submitted
 * [ ] Create a string property to store the user
   * [ ] Watch the property change as type in the input
 * [ ] Log the user input when the form is submitted

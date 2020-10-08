@@ -11,8 +11,8 @@
 * [x] Create an array property for to-dos
 * [x] Push the new to-do into the to-dos array, with done: false
 * [x] Show the to-dos in a list
-* [ ] Check done on a to-do to mark it as done
-  * [ ] Show a line through the to-do text
+* [x] Check done on a to-do to mark it as done or to redo it
+  * [x] Show a line through the to-do text
 * [ ] Add a button to delete a to-do
 * [ ] Add a button to mark all to-dos as done
 

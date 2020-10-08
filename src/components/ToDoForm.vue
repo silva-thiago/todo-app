@@ -7,8 +7,8 @@
       <button>Add new ToDo</button>
     </form>
     <ul>
-      <li v-for="todo in todos" :key="todo.id">
-        <h3>{{todo.content}}</h3>
+      <li v-for="todo in todos" :key="todo.id" :class="todo">
+        <h3 :class="{ done: todo.done }" @click="toggleDone(todo)" title="Click to mark a task as done or to redo it">{{todo.content}}</h3>
       </li>
     </ul>
   </div>
@@ -31,10 +31,15 @@ export default {
       newTodo.value = ''
     }
 
+    function toggleDone (todo) {
+      todo.done = !todo.done
+    }
+
     return {
       todos,
       newTodo,
-      addNewTodo
+      addNewTodo,
+      toggleDone
     }
   },
 
@@ -47,4 +52,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.todo {
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
 </style>

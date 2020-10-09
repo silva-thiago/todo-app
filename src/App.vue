@@ -15,6 +15,11 @@
   padding: 0;
 }
 
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 html, body {
   height: 100vh;
 }
@@ -29,7 +34,6 @@ body {
   font-weight: 400;
   letter-spacing: normal;
   line-height: normal;
-  text-align: center;
   text-rendering: optimizeLegibility; // Support for Safari and Chrome
   text-transform: none;
   -webkit-font-smoothing: antialiased;
@@ -74,18 +78,16 @@ main {
   @include for-size(screen-up) { max-width: 768px; } */
 }
 
-.app {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 .nav {
-  padding: 30px;
+  padding: 2rem;
+  text-align: center;
+
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: rgb(47, 133, 90);
+
     &.router-link-exact-active {
-      color: #42b983;
+      color: rgb(72, 187, 120);
     }
   }
 }
